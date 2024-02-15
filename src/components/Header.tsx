@@ -15,7 +15,7 @@ export default function Header(){
       };
     return(
         <>
-        <div className='flex justify-between items-center p-10 border-b border-gray-400 bg-slate-200'>
+        <div className='flex lg:flex-row flex-col lg:gap-0 gap-5 justify-between items-center p-10 border-b border-gray-400 bg-slate-200'>
             <Link to="" className='flex justify-center items-cente gap-3'>
                 <img src='/logo.png' alt='' className='w-7'/>
                 <h1 className='text-2xl'>File Shuffling</h1>

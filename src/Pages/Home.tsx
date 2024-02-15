@@ -8,7 +8,7 @@ function Home() {
       <Helmet>
         <title>File Shuffler | 홈</title>
       </Helmet>
-      <div className="grid grid-cols-5 gap-5 text-white font-bold text-2xl text-center p-5">
+      <div className="grid lg:grid-cols-5 grid-cols-1 gap-5 text-white font-bold text-2xl text-center p-5">
         <Link
           to="/contents"
           className="bg-slate-400 py-24 hover:scale-[1.02] transition shadow-xl flex-col flex justify-center items-center gap-2"

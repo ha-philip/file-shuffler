@@ -34,9 +34,9 @@ function Login() {
         <title>File Shuffler | 로그인</title>
       </Helmet>
       <form onSubmit={handleSubmit(onValid)}>
-        <div className="mt-16 flex flex-col justify-center items-center">
+        <div className="lg:mt-16 mt-7 flex flex-col justify-center items-center">
           <h1 className="text-3xl mb-5">로그인</h1>
-          <div className="flex flex-col p-20 bg-gray-300 shadow-lg gap-4 w-[30rem]">
+          <div className="flex flex-col lg:px-20 lg:py-20 px-5 py-20 bg-gray-300 shadow-lg gap-4 lg:w-[30rem] w-[95vw]">
             <input
               type="text"
               placeholder="시리얼번호"
