@@ -17,7 +17,7 @@ export default function Header(){
         <>
         <div className='flex justify-between items-center p-10 border-b border-gray-400 bg-slate-200'>
             <Link to="" className='flex justify-center items-cente gap-3'>
-                <img src='https://static.thenounproject.com/png/777906-200.png' alt='' className='w-7'/>
+                <img src='/logo.png' alt='' className='w-7'/>
                 <h1 className='text-2xl'>File Shuffling</h1>
             </Link>
             {user.isLogin ? 
