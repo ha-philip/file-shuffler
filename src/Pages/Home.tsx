@@ -1,17 +1,37 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
+import { cls } from "../Utils";
 
+const shuffleArray = (array: string[]) => {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
 function Home() {
+  const bgColor = [
+    "bg-slate-400",
+    "bg-pink-300",
+    "bg-lime-300",
+    "bg-yellow-300",
+    "bg-orange-300",
+    "bg-red-300",
+    "bg-blue-300",
+    "bg-green-300",
+    "bg-gray-300",
+    "bg-purple-300",
+  ];
+  shuffleArray(bgColor);
   return (
     <>
       <Helmet>
         <title>File Shuffler | 홈</title>
       </Helmet>
-      <div className="grid lg:grid-cols-5 grid-cols-1 gap-5 text-white font-bold text-2xl text-center p-5">
+      <div className="grid lg:grid-cols-5 grid-cols-3 gap-0 text-white font-bold text-xs lg:text-2xl text-center p-5 lg:mb-0 mb-32">
         <Link
           to="/contents"
-          className="bg-slate-400 py-24 hover:scale-[1.02] transition shadow-xl flex-col flex justify-center items-center gap-2"
+          className={cls(bgColor[0], "aspect-square hover:scale-[1.05] transition shadow-xl flex-col flex justify-center items-center gap-2")}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +39,7 @@ function Home() {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="w-8 h-8"
+            className="lg:w-8 lg:h-8 w-6 h-6"
           >
             <path
               strokeLinecap="round"
@@ -31,7 +51,7 @@ function Home() {
         </Link>
         <Link
           to="/contents"
-          className="bg-pink-300 py-24 hover:scale-[1.02] transition shadow-xl flex-col flex justify-center items-center gap-2"
+          className={cls(bgColor[1], "aspect-square hover:scale-[1.05] transition shadow-xl flex-col flex justify-center items-center gap-2")}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +59,7 @@ function Home() {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="w-8 h-8"
+            className="lg:w-8 lg:h-8 w-6 h-6"
           >
             <path
               strokeLinecap="round"
@@ -51,7 +71,7 @@ function Home() {
         </Link>
         <Link
           to="/contents"
-          className="bg-lime-300 py-24 hover:scale-[1.02] transition shadow-xl flex-col flex justify-center items-center gap-2"
+          className={cls(bgColor[2], "aspect-square hover:scale-[1.05] transition shadow-xl flex-col flex justify-center items-center gap-2")}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +79,7 @@ function Home() {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="w-8 h-8"
+            className="lg:w-8 lg:h-8 w-6 h-6"
           >
             <path
               strokeLinecap="round"
@@ -71,7 +91,7 @@ function Home() {
         </Link>
         <Link
           to="/contents"
-          className="bg-yellow-300 py-24 hover:scale-[1.02] transition shadow-xl flex-col flex justify-center items-center gap-2"
+          className={cls(bgColor[3], "aspect-square hover:scale-[1.05] transition shadow-xl flex-col flex justify-center items-center gap-2")}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +99,7 @@ function Home() {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="w-8 h-8"
+            className="lg:w-8 lg:h-8 w-6 h-6"
           >
             <path
               strokeLinecap="round"
@@ -91,7 +111,7 @@ function Home() {
         </Link>
         <Link
           to="/contents"
-          className="bg-orange-300 py-24 hover:scale-[1.02] transition shadow-xl flex-col flex justify-center items-center gap-2"
+          className={cls(bgColor[4], "aspect-square hover:scale-[1.05] transition shadow-xl flex-col flex justify-center items-center gap-2")}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +119,7 @@ function Home() {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="w-8 h-8"
+            className="lg:w-8 lg:h-8 w-6 h-6"
           >
             <path
               strokeLinecap="round"
@@ -111,7 +131,7 @@ function Home() {
         </Link>
         <Link
           to="/contents"
-          className="bg-red-300 py-24 hover:scale-[1.02] transition shadow-xl flex-col flex justify-center items-center gap-2"
+          className={cls(bgColor[5], "aspect-square hover:scale-[1.05] transition shadow-xl flex-col flex justify-center items-center gap-2")}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -119,7 +139,7 @@ function Home() {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="w-8 h-8"
+            className="lg:w-8 lg:h-8 w-6 h-6"
           >
             <path
               strokeLinecap="round"
@@ -131,7 +151,7 @@ function Home() {
         </Link>
         <Link
           to="/contents"
-          className="bg-blue-300 py-24 hover:scale-[1.02] transition shadow-xl flex-col flex justify-center items-center gap-2"
+          className={cls(bgColor[6], "aspect-square hover:scale-[1.05] transition shadow-xl flex-col flex justify-center items-center gap-2")}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -139,7 +159,7 @@ function Home() {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="w-8 h-8"
+            className="lg:w-8 lg:h-8 w-6 h-6"
           >
             <path
               strokeLinecap="round"
@@ -151,7 +171,7 @@ function Home() {
         </Link>
         <Link
           to="/contents"
-          className="bg-green-300 py-24 hover:scale-[1.02] transition shadow-xl flex-col flex justify-center items-center gap-2"
+          className={cls(bgColor[7], "aspect-square hover:scale-[1.05] transition shadow-xl flex-col flex justify-center items-center gap-2")}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -159,7 +179,7 @@ function Home() {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="w-8 h-8"
+            className="lg:w-8 lg:h-8 w-6 h-6"
           >
             <path
               strokeLinecap="round"
@@ -171,7 +191,7 @@ function Home() {
         </Link>
         <Link
           to="/contents"
-          className="bg-gray-300 py-24 hover:scale-[1.02] transition shadow-xl flex-col flex justify-center items-center gap-2"
+          className={cls(bgColor[8], "aspect-square hover:scale-[1.05] transition shadow-xl flex-col flex justify-center items-center gap-2")}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -179,7 +199,7 @@ function Home() {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="w-8 h-8"
+            className="lg:w-8 lg:h-8 w-6 h-6"
           >
             <path
               strokeLinecap="round"
@@ -191,7 +211,7 @@ function Home() {
         </Link>
         <Link
           to="/contents"
-          className="bg-purple-300 py-24 hover:scale-[1.02] transition shadow-xl flex-col flex justify-center items-center gap-2"
+          className={cls(bgColor[9], "aspect-square hover:scale-[1.05] transition shadow-xl flex-col flex justify-center items-center gap-2")}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -199,7 +219,7 @@ function Home() {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="w-8 h-8"
+            className="lg:w-8 lg:h-8 w-6 h-6"
           >
             <path
               strokeLinecap="round"
