@@ -31,7 +31,7 @@ export default function Header(){
                 로그인
             </Link>}
             <Link to="/help" className='bg-white px-5 py-2 rounded-full text-sm hover:bg-gray-100 transition lg:block hidden'>
-                도움말dddd
+                도움말
             </Link>
             </div>
         </div>
