@@ -1,11 +1,23 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function OnlyLogin() {
   const router = useNavigate();
   const location = useLocation();
   const { user }: any = AuthContext();
+
+  const [selectedFile, setSelectedFile] = useState<string | null>(null);
+
+  const handleFileChange = (event: any) => {
+    const file = event.target.files[0];
+    if(file){
+      setSelectedFile(file.name);
+    }else{
+      setSelectedFile(null);
+    }
+    
+  };
   useEffect(() => {
     if (!user.isLogin) {
       router("/");
@@ -13,8 +25,10 @@ export default function OnlyLogin() {
   }, [location.pathname]);
   return (
     <>
-      <div className="flex justify-center items-center lg:gap-10 gap-1 lg:text-3xl text-xl text-white font-bold lg:mt-24 mt-12">
-        <button className="bg-red-300 w-24 h-24 lg:w-80 lg:h-80 shadow-xl transition hover:scale-105 flex flex-col justify-center items-center gap-2">
+      <div className="lg:mt-24 mt-12 text-center">{selectedFile && selectedFile}</div>
+      <div className="flex justify-center items-center lg:gap-10 gap-1 lg:text-3xl text-xl text-white font-bold mt-5">
+        <input type="file" id="select-file" className="hidden" onChange={handleFileChange}/>
+        <label htmlFor="select-file" className="bg-red-300 w-24 h-24 lg:w-80 lg:h-80 shadow-xl transition hover:scale-105 flex flex-col justify-center items-center gap-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -30,7 +44,7 @@ export default function OnlyLogin() {
             />
           </svg>
           File
-        </button>
+        </label>
         <button className="bg-green-300 w-24 h-24 lg:w-80 lg:h-80 shadow-xl transition hover:scale-105 flex flex-col justify-center items-center gap-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
